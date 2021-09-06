@@ -5,6 +5,7 @@ class Router {
     constructor(options) {
         this.$options = options;
         let inst = window.location.hash.slice(1) || "/";
+        // 通过vue自带的工具包实现响应式
         Vue.util.defineReactive(this,"path",inst);
         window.addEventListener("hashchange",()=>{
             this.path = window.location.hash.slice(1) || "/";
