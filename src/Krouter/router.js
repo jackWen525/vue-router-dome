@@ -1,5 +1,5 @@
 let Vue;
-// 创建路由类型
+// 创建路由类
 class Router {
     path = "/";
     constructor(options) {
