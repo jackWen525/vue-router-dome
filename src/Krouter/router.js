@@ -1,10 +1,10 @@
 let Vue;
 // 创建路由类
 class Router {
-    path = "/";
+    path;
     constructor(options) {
         this.$options = options;
-        // this.path = window.location.hash.slice(1) || "/";
+        this.path = window.location.hash.slice(1) || "/";
         // 通过vue自带的工具包实现响应式
         // Vue.util.defineReactive(this,"path",inst);
         window.addEventListener("hashchange",()=>{
