@@ -13,19 +13,19 @@ class Store {
         this.commit = this.commit.bind(this);
         this.dispatch = this.dispatch.bind(this);
     }
-    commit(type){
+    commit(type,...arg){
         if(!this.$options.mutations[type]) {
             console.error("没有这个方法");
             return;
         }
-        this.$options.mutations[type](this.$options.state);
+        this.$options.mutations[type](this.$options.state,...arg);
     }
-    dispatch(type){
+    dispatch(type,...arg){
         if(!this.actions[type]) {
             console.error("该方法不存在");
             return;
         }
-        this.actions[type](this);
+        this.actions[type](this,...arg);
     }
 }
 
