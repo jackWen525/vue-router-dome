@@ -31,7 +31,7 @@ class Store {
 
 const install = function (_vue) {
     Vue = _vue;
-    // 用混入把路由示例挂在原型上
+    // 用混入把Store实例挂在原型上
     Vue.mixin({
         beforeCreate() {
             if (this.$options.store) {
