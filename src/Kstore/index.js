@@ -19,6 +19,11 @@ export default new Vuex.Store({
       }, 1000)
     }
   },
+  getters:{
+    comUnm(state){
+      return state.num+10
+    }
+  },
   modules: {
   }
 })
