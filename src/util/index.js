@@ -13,9 +13,8 @@ function deepClone(target) {
         
         if (Object.hasOwnProperty.call(target, key)) {
 
-            clone[key] = target[key];
+            clone[key] = deepClone(target[key]);
             
-            deepClone(target[key]);
         }
     }
     return clone;
