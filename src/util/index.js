@@ -55,9 +55,19 @@ function arrayFlattening(array) {
     }
     return falarr
 }
+/**
+ * 
+ * @param {*} target 判断的对象
+ * @returns 类型
+ */
+function judgeType(target) {
+    return Object.prototype.toString.call(target).slice(8,-1);
+}
+
 export default {
     deepClone,
     getRandom,
-    arrayFlattening
+    arrayFlattening,
+    judgeType
 }
 
